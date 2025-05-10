@@ -121,6 +121,7 @@ class MyHomePageState extends State<MyHomePage> {
           await FlutterExifRotation.rotateImage(path: image.path);
 
       final plates = await _alprsdkPlugin.extractFaces(rotatedImage.path);
+      print("hello this is testing: ${plates.toString()}");
       var numbers = "";
       for (var plate in plates) {
         numbers = plate['number'] + ", ";

@@ -42,6 +42,7 @@ class AlprRecognitionViewState extends State<AlprRecognitionView> {
     setState(() {
       _plates = plates;
     });
+     print("${plates.toString()}");
 
     return false;
   }

@@ -83,6 +83,8 @@ class AlprsdkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
     } else if (call.method == "extractFaces") {
       val platesMap: ArrayList<HashMap<String, Any>> = ArrayList<HashMap<String, Any>>()
       val imagePath: String? = call.argument("imagePath")
+        Log.e("Image co-ordinates", imagePath.toString());
+        Log.e("Image co-ordinates", platesMap.toString());
 
       val options = BitmapFactory.Options().apply {
           inPreferredConfig = Bitmap.Config.ARGB_8888
